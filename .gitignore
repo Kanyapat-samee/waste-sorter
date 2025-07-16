@@ -1,0 +1,58 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node / React
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Env files
+.env
+.env.*
+!.env.example
+.env.production
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+terraform.tfvars
+crash.log
+
+# Python / Lambda
+__pycache__/
+*.py[cod]
+*.pyo
+lambda_payload.zip
+
+# Virtual Environment
+venv/
+*/venv/
+
+# VSCode / Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Docker
+*.tar
+docker-compose.override.yml
+
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
