@@ -1,12 +1,75 @@
-# React + Vite
+# Waste Sorter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Waste Sorter is a web application that helps users classify waste types using image recognition. Users can upload or capture images of trash, and the system will predict the appropriate waste category and recommend the correct disposal bin.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Upload or capture waste images via webcam
+* Classify waste into 4 categories: General, Compostable, Recyclable, Hazardous
+* Suggest the correct waste bin color
+* Feedback system for user corrections
+* Frontend built with React and Vite
+* Backend built with Flask and TensorFlow
+* Docker-ready backend for easy deployment
 
-## Expanding the ESLint configuration
+## Frontend
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Tech Stack
+
+* React
+* Vite
+* CSS Modules
+
+### Run Locally
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+## Backend
+
+### Tech Stack
+
+* Python 3.10
+* Flask
+* TensorFlow / Keras
+* Pillow, NumPy
+* Docker
+
+### Endpoints
+
+* `POST /classify`: Accepts image (form-data), returns predicted class
+* `POST /submit-feedback`: Accepts user feedback for model improvement
+
+### Run Locally
+
+```bash
+cd backend
+pip install -r requirements.txt
+python app.py
+```
+
+### Run with Docker
+
+```bash
+docker-compose up --build
+```
+
+## Project Structure
+
+```
+waste-sorter/
+├── backend/
+│   ├── app.py
+│   ├── predict.py
+│   ├── model/
+│   ├── requirements.txt
+│   ├── Dockerfile
+│   └── docker-compose.yml
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── vite.config.js
+```
