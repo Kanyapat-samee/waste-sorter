@@ -51,12 +51,6 @@ pip install -r requirements.txt
 python app.py
 ```
 
-### Run with Docker
-
-```bash
-docker-compose up --build
-```
-
 ## Project Structure
 
 ```
@@ -66,8 +60,8 @@ waste-sorter/
 │   ├── predict.py
 │   ├── model/
 │   ├── requirements.txt
-│   ├── Dockerfile
-│   └── docker-compose.yml
+│   └── Dockerfile
+
 ├── frontend/
 │   ├── src/
 │   ├── public/
